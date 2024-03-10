@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b9688951-8237-454a-b5b0-99f3783776fd}</ProjectGuid>
+    <RootNamespace>InternalDXGICheat</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>module</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>.\libs\openssl\include;.\libs\json\include;.\libs\curl\include;.\libs\cryptopp\include;$(DXSDK_DIR)Include;D:\hack+bypass\InternalDXGICheat\Microsoft DirectX SDK\Include;C:\Users\minhd\Downloads\VnHaxLoader (1)\VnHaxLoader (1)\VnHaxLoader\Microsoft-DirectX-SDK-June-2010--master\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>.\libs\openssl\lib;.\libs\curl\lib;.\libs\cryptopp\lib;D:\hack+bypass\InternalDXGICheat\Microsoft DirectX SDK\Lib\x86;C:\Users\minhd\Downloads\VnHaxLoader (1)\VnHaxLoader (1)\VnHaxLoader\Microsoft-DirectX-SDK-June-2010--master\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\minhd\Downloads\VnHaxLoader\VnHaxLoader\VnHaxLoader\Microsoft-DirectX-SDK-June-2010--master\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\minhd\Downloads\VnHaxLoader\VnHaxLoader\VnHaxLoader\Microsoft-DirectX-SDK-June-2010--master\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;INTERNALDXGICHEAT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;INTERNALDXGICHEAT_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>winhttp.lib;Cryptolens.lib;./libs/cryptopp/lib/cryptopp-static.lib;./libs/curl/lib/libcurl.lib;./libs/openssl/lib/libcrypto.lib;./libs/openssl/lib/libssl.lib;./libs/zlib.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(ProjectDir)include;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;INTERNALDXGICHEAT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;INTERNALDXGICHEAT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Aimbot.h" />
+    <ClInclude Include="api\KeyAuth.hpp" />
+    <ClInclude Include="colors.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="driver.h" />
+    <ClInclude Include="DriverController.h" />
+    <ClInclude Include="DX11.h" />
+    <ClInclude Include="DX11Window.h" />
+    <ClInclude Include="font.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Hook.h" />
+    <ClInclude Include="icon.h" />
+    <ClInclude Include="iconcpp.h" />
+    <ClInclude Include="ImGui\imconfig.h" />
+    <ClInclude Include="ImGui\imgui.h" />
+    <ClInclude Include="ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="ImGui\imgui_internal.h" />
+    <ClInclude Include="ImGui\imstb_rectpack.h" />
+    <ClInclude Include="ImGui\imstb_textedit.h" />
+    <ClInclude Include="Includes.h" />
+    <ClInclude Include="include\cryptolens\ActivateError.hpp" />
+    <ClInclude Include="include\cryptolens\ActivationData.hpp" />
+    <ClInclude Include="include\cryptolens\api.hpp" />
+    <ClInclude Include="include\cryptolens\base64.hpp" />
+    <ClInclude Include="include\cryptolens\basic_Cryptolens.hpp" />
+    <ClInclude Include="include\cryptolens\basic_Error.hpp" />
+    <ClInclude Include="include\cryptolens\basic_SKM.hpp" />
+    <ClInclude Include="include\cryptolens\Configuration_Unix.hpp" />
+    <ClInclude Include="include\cryptolens\Configuration_Windows.hpp" />
+    <ClInclude Include="include\cryptolens\core.hpp" />
+    <ClInclude Include="include\cryptolens\cryptolens_internals.hpp" />
+    <ClInclude Include="include\cryptolens\Customer.hpp" />
+    <ClInclude Include="include\cryptolens\DataObject.hpp" />
+    <ClInclude Include="include\cryptolens\Error.hpp" />
+    <ClInclude Include="include\cryptolens\imports\ArduinoJson5\ArduinoJson.hpp" />
+    <ClInclude Include="include\cryptolens\imports\curl\curl.h" />
+    <ClInclude Include="include\cryptolens\imports\openssl\bn.h" />
+    <ClInclude Include="include\cryptolens\imports\openssl\evp.h" />
+    <ClInclude Include="include\cryptolens\imports\openssl\rsa.h" />
+    <ClInclude Include="include\cryptolens\imports\openssl\ssl.h" />
+    <ClInclude Include="include\cryptolens\imports\windows\atlconv.h" />
+    <ClInclude Include="include\cryptolens\imports\windows\atlsecurity.h" />
+    <ClInclude Include="include\cryptolens\imports\windows\comdef.h" />
+    <ClInclude Include="include\cryptolens\imports\windows\iphlpapi.h" />
+    <ClInclude Include="include\cryptolens\imports\windows\Wbemidl.h" />
+    <ClInclude Include="include\cryptolens\imports\windows\wincrypt.h" />
+    <ClInclude Include="include\cryptolens\imports\windows\Windows.h" />
+    <ClInclude Include="include\cryptolens\imports\windows\winhttp.h" />
+    <ClInclude Include="include\cryptolens\LicenseKey.hpp" />
+    <ClInclude Include="include\cryptolens\LicenseKeyChecker.hpp" />
+    <ClInclude Include="include\cryptolens\LicenseKeyInformation.hpp" />
+    <ClInclude Include="include\cryptolens\MachineCodeComputer_caching.hpp" />
+    <ClInclude Include="include\cryptolens\MachineCodeComputer_COM.hpp" />
+    <ClInclude Include="include\cryptolens\MachineCodeComputer_static.hpp" />
+    <ClInclude Include="include\cryptolens\MachineCodeComputer_SystemdDBusInodes_SHA256.hpp" />
+    <ClInclude Include="include\cryptolens\RawLicenseKey.hpp" />
+    <ClInclude Include="include\cryptolens\RequestHandler_curl.hpp" />
+    <ClInclude Include="include\cryptolens\RequestHandler_v20190401_to_v20180502.hpp" />
+    <ClInclude Include="include\cryptolens\RequestHandler_WinHTTP.hpp" />
+    <ClInclude Include="include\cryptolens\ResponseParser_ArduinoJson5.hpp" />
+    <ClInclude Include="include\cryptolens\SignatureVerifier_BearSSL.hpp" />
+    <ClInclude Include="include\cryptolens\SignatureVerifier_CryptoAPI.hpp" />
+    <ClInclude Include="include\cryptolens\SignatureVerifier_OpenSSL.hpp" />
+    <ClInclude Include="include\cryptolens\SignatureVerifier_v20190401_to_v20180502.hpp" />
+    <ClInclude Include="include\cryptolens\validators\AndValidator.hpp" />
+    <ClInclude Include="include\cryptolens\validators\CorrectKeyValidator.hpp" />
+    <ClInclude Include="include\cryptolens\validators\CorrectProductValidator.hpp" />
+    <ClInclude Include="include\cryptolens\validators\NotExpiredValidator_ctime.hpp" />
+    <ClInclude Include="include\cryptolens\validators\NotExpiredValidator_kernel32.hpp" />
+    <ClInclude Include="include\cryptolens\validators\OnValidMachineValidator.hpp" />
+    <ClInclude Include="include\cryptolens\validators\TautologyValidator.hpp" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="Offsets.h" />
+    <ClInclude Include="ParallelWorker.h" />
+    <ClInclude Include="resources.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="SimpleIni.h" />
+    <ClInclude Include="syscall.h" />
+    <ClInclude Include="Tools.h" />
+    <ClInclude Include="xor.hpp" />
+    <ClInclude Include="xorstr.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Aimbot.cpp" />
+    <ClCompile Include="Algorithm.cpp" />
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="DriverController.cpp" />
+    <ClCompile Include="DX11.cpp" />
+    <ClCompile Include="DX11Window.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Hook.cpp" />
+    <ClCompile Include="ImGui\imgui.cpp" />
+    <ClCompile Include="ImGui\imgui_demo.cpp" />
+    <ClCompile Include="ImGui\imgui_draw.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="ImGui\imgui_tables.cpp" />
+    <ClCompile Include="ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="Algorithm.h" />
+    <ClCompile Include="Tools.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
