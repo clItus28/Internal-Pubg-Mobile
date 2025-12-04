@@ -17,7 +17,15 @@ This project demonstrates how to build a clean external cheat using memory readi
 >   - Distance
 >   - ...
 > - **Team Check**  
-> - **ImGui Overlay Menu**  
+> - **ImGui Overlay Menu**
+> - **Aimbot**
+> - Mouse event
+> - Silent Aim
+> - **Memory**
+> - No recoil
+> - X effect
+> - ...
+> - **Basic config system**
 
 # 🛠 Requirements
 > - Windows 10 / 11  
